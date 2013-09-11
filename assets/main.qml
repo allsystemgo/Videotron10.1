@@ -69,7 +69,9 @@ TabbedPane {
                         }
                     }
                     Label {
-                        text: "Consommation du 15 août au 14 septembre 2013"
+                        id: titre_consommation
+                        objectName: "titre_consommation"
+                        text: ""
                         horizontalAlignment: HorizontalAlignment.Left
                         verticalAlignment: VerticalAlignment.Top
 
@@ -102,6 +104,18 @@ TabbedPane {
                                 color: Color.create("#FFFFFF")
                                 fontSize: FontSize.XXLarge
                             }
+                        }
+                    }
+                    Container {
+                        layout: DockLayout {}
+                        horizontalAlignment: HorizontalAlignment.Center
+                        verticalAlignment: VerticalAlignment.Center
+                        
+                        ActivityIndicator {
+                            id: indicator
+                            objectName: "indicator"
+                            
+                            preferredHeight: 350
                         }
                     }
                 }
@@ -149,10 +163,28 @@ TabbedPane {
 
                         horizontalAlignment: HorizontalAlignment.Fill
                         verticalAlignment: VerticalAlignment.Fill
+                        
                         Label {
+                            horizontalAlignment: HorizontalAlignment.Left
+                            verticalAlignment: VerticalAlignment.Top
+                            leftPadding: 20
+                            
+                            text: "Upload"
+                            
+                            textStyle {
+                                color: Color.create("#2B79A1")
+                                fontSize: FontSize.XLarge
+                                fontWeight: FontWeight.Bold
+                            }
+                        
+                        }
+
+                        Label {
+                            id: uploadLabel
+                            objectName: "uploadLabel"
                             horizontalAlignment: HorizontalAlignment.Center
                             verticalAlignment: VerticalAlignment.Center
-                            text: "200.0 GB"
+                            text: ""
 
                             textStyle {
                                 color: Color.create("#2B79A1")
@@ -217,7 +249,7 @@ TabbedPane {
                             verticalAlignment: VerticalAlignment.Top
                             leftPadding: 20
 
-                            text: "Upload"
+                            text: "Download"
 
                             textStyle {
                                 color: Color.create("#BFD841")
@@ -228,10 +260,12 @@ TabbedPane {
                         }
 
                         Label {
+                            id: downloadLabel
+                            objectName: "downloadLabel"
                             horizontalAlignment: HorizontalAlignment.Center
                             verticalAlignment: VerticalAlignment.Center
 
-                            text: "60.0 GB"
+                            text: ""
 
                             textStyle {
                                 color: Color.create("#BFD841")
