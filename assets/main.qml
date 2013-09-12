@@ -176,7 +176,6 @@ TabbedPane {
                                 fontSize: FontSize.XLarge
                                 fontWeight: FontWeight.Bold
                             }
-                        
                         }
 
                         Label {
@@ -184,6 +183,7 @@ TabbedPane {
                             objectName: "uploadLabel"
                             horizontalAlignment: HorizontalAlignment.Center
                             verticalAlignment: VerticalAlignment.Center
+                            leftPadding: 200
                             text: ""
 
                             textStyle {
@@ -216,7 +216,8 @@ TabbedPane {
                     Container {
                         layout: DockLayout {
                         }
-                        background: Color.create("#BFD841")
+                        background: Color.create("#6E7826")
+                        //background: Color.create("#BFD841")
                         preferredHeight: 200
                         preferredWidth: 200
 
@@ -252,7 +253,7 @@ TabbedPane {
                             text: "Download"
 
                             textStyle {
-                                color: Color.create("#BFD841")
+                                color: Color.create("#6E7826")
                                 fontSize: FontSize.XLarge
                                 fontWeight: FontWeight.Bold
                             }
@@ -268,7 +269,7 @@ TabbedPane {
                             text: ""
 
                             textStyle {
-                                color: Color.create("#BFD841")
+                                color: Color.create("#6E7826")
                                 fontSize: FontSize.XLarge
                                 fontWeight: FontWeight.W500
                             }

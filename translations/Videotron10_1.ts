@@ -14,12 +14,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="288"/>
+        <location filename="../assets/main.qml" line="289"/>
         <source>Graphique</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="293"/>
+        <location filename="../assets/main.qml" line="294"/>
         <source>Second tab</source>
         <translation type="unfinished"></translation>
     </message>

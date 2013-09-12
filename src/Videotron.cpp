@@ -1,4 +1,5 @@
 #include "Videotron.hpp"
+#include "ActiveFrameQML.hpp"
 
 #include <bb/cascades/ActivityIndicator>
 #include <bb/cascades/Application>
@@ -36,6 +37,11 @@ Videotron::Videotron(bb::cascades::Application *app) :
 	// to ensure the document gets destroyed properly at shut down.
 	QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
 	qml->setContextProperty("app", this);
+
+	ActiveFrameQML *activeFrame = new ActiveFrameQML();
+	Application::instance()->setCover(activeFrame);
+
+	qml->setContextProperty("activeFrame", activeFrame);
 
 	// Create root object for the UI
 	AbstractPane* root = qml->createRootObject<AbstractPane>();
